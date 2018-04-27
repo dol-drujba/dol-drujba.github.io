@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="RU">
+	<head>
+		<meta charset="UTF-8">
+		<title>ДОЛ "Дружба"</title>
+
+		<!-- Подключение ICON -->
+		<link rel="Shortcut Icon" href="Multimedia/Favicon.png">
+
+		<!-- Подключение PLUGINS -->
+		<link rel="stylesheet" href="Plugins/Slick/slick-theme.css">
+		<link rel="stylesheet" href="Plugins/Slick/slick.css">
+
+		<!-- Подключение STYLES -->
+		<link rel="stylesheet" href="Styles/ScrollBar.css">
+		<link rel="stylesheet" href="Styles/Bootstrap-Grid.min.css">
+		<link rel="stylesheet" href="Styles/Columns.min.css">
+		<link rel="stylesheet" href="Styles/Frame.css">
+		<link rel="stylesheet" href="Styles/Content.css">
+		<link rel="stylesheet" href="Styles/Adaptive.css">
+	</head>
+
+	<body>
+
+		<!-- LOADER-->
+		<div class="loadreveal"></div>
+		<div id="loadscreen"><div id="loader"></div></div>
+
+		<div class="container">
+
+			<!-- HEADER -->
+			<div class="Header">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-lg-auto">
+						<a href="index.html"><img src="Multimedia/Favicon.png" alt='ДОЛ "Дружба"'></a>
+						<div class="Header-Caption"><h1>"Дружба"</h1><br><p>Детский Оздоровительный Лагерь</p></div>
+					</div>
+					<div class="col-lg-auto">						
+						<div class="Header-Menu">
+							<ul>
+								<li><a href="index.html">Главная</a></li>
+								<li><a href="About.html">О лагере</a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="Archive.html">Архив</a></li>
+								<li><a href="Contacts.html" class="Header-Menu_Select">Контакты</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-3">
+
+					<!-- SIDE BAR -->
+					<div class="SideBar">
+						<div class="SideBar-Header-Menu_Button">
+							<ul>
+								<li><a href="#">Меню</a></li></div>
+							</ul>
+							<div class="IconMenu">
+								<hr><hr><hr>
+							</div>							
+						<div class="SideBar-Header-Menu">
+							<ul>
+								<li><a href="index.html">Главная</a></li>
+								<li><a href="About.html">О лагере</a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="Archive.html">Архив</a></li>
+								<li><a href="Contacts.html" class="SideBar-Menu_Select">Контакты</a></li>
+							</ul>
+						</div>
+
+						<div class="SideBar-Menu">
+							<ul>
+								<li><a href="#">Общая информация</a></li>
+								<li><a href="#">Размещение</a></li>
+								<li><a href="#">Программа</a></li>
+							</ul>
+						</div>
+						
+						<div class="SideBar-Category">
+							<div class="SideBar-Category_Caption">Мы на карте</div>
+							<img src="Multimedia/Map.png" alt="Мы на карте">
+						</div>
+
+						<div class="SideBar-Category">
+							<div class="SideBar-Category_Caption">Атрибутика</div>
+							<img src="Multimedia/Paraphernalia.png" alt="Атрибутика">
+						</div>
+					</div>
+				</div>
+
+				<!-- CONTENT -->
+				<div class="col-lg-9">
+					<div class="Content">
+						<div class="Content-General">
+
+							<!-- <hr class="Separator"> -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div class="Footer">			
+			<div class="container">
+				<div class="Colums">
+					<div class="row justify-content-between ">
+						<div class="col-md-auto col-6">
+							<h5>Навигация</h5>
+							<p>
+								<div class="Footer-Menu">
+									<ul>
+										<li><a href="#">Главная</a></li>
+										<li><a href="#">О лагере</a></li>
+										<li><a href="#">Новости</a></li>
+										<li><a href="#">Архив</a></li>
+										<li><a href="#">Контакты</a></li>
+									</ul>
+								</div>							
+							</p>
+						</div>
+						<div class="col-md-auto col-6">
+							
+							<h5>Социальные сети</h5>
+							<p>
+								<div class="Footer-SocialLinks">
+									<ul>
+										<li><a href="#">ВКонтакте</a></li>
+										<li><a href="#">Одноклассники</a></li>
+										<li><a href="#">Instagram</a></li>
+										<li><a href="#">Facebook</a></li>
+										<li><a href="#">Twitter</a></li>
+									</ul>
+								</div>	
+							</p>
+						</div>
+						<div class="col-md">
+							<div class="Contacts">
+								<h5>
+									8 777 666 55 44<br>
+									8 999 111 22 33						
+								</h5>
+								<p>
+									dol-drujba.mail.ru<br><br>
+									Россия, Ярославская область<br>Борисоглебский район, д. Степаново
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>				
+				
+				<div class="Footer-AP">
+					<hr><p>© ДОЛ "Дружба", 2018 г. Все права защищены.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Подключение SCRIPTS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="Plugins/Slick/slick.js"></script>
+		<script src="Scripts/Script.js"></script>
+
+		<script>
+			$('.Slider-Bloks').slick({
+				arrows: false,
+				dots: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				autoplay: true,
+
+				responsive: [{
+		      breakpoint: 767,
+		      settings: {
+		      	arrows: false,
+		      	dots: true,
+		      	slidesToShow: 1,
+		      	slidesToScroll: 1,
+		      	autoplay: true
+		      }
+		    },]
+			});
+
+			$('.Slider-Photos').slick({
+				arrows: false,
+				dots: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				autoplay: true			
+			});
+		</script>
+	</body>
+</html>

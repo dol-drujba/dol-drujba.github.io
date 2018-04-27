@@ -1,0 +1,198 @@
+/**************************************************/
+/* Colors:
+/*   Background: rgb(238, 243, 245)
+/*   Activ: rgb(255, 220, 96)
+/*   Dark: rgb(19, 19, 19)
+/**************************************************/
+
+
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('../Fonts/Roboto/Roboto-Regular.ttf'); }
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url('../Fonts/Roboto/Roboto-Bold.ttf'); }
+
+@font-face {
+	font-family: 'Century-Gothic-Regular';
+	src: url('../Fonts/Century Gothic/Century-Gothic-Regular.ttf'); }
+@font-face {
+	font-family: 'Century-Gothic-Bold';
+	src: url('../Fonts/Century Gothic/Century-Gothic-Bold.ttf'); }
+
+@font-face {
+	font-family: 'Exo-Regular';
+	src: url('../Fonts/Exo/Exo-Regular.otf'); }
+@font-face {
+	font-family: 'Exo-Bold';
+	src: url('../Fonts/Exo/Exo-Bold.otf'); }
+
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: url('../Fonts/Montserrat/Montserrat-Regular.ttf'); }
+@font-face {
+	font-family: 'Montserrat-Bold';
+	src: url('../Fonts/Montserrat/Montserrat-Bold.ttf'); }
+
+.Content-About h1 {
+	font-family: 'Montserrat-Bold', sans-serif;
+	text-align: center;
+}
+.Content-About h2 {
+	margin: 6px 0 6px 0;
+	
+	font-family: 'Montserrat-Bold', sans-serif;
+	font-size: 1em;
+}
+.Content-About p {
+	margin: 6px 0 6px 0;
+
+	font-family: 'Montserrat-Regular', sans-serif;
+	text-indent: 2em;
+	text-align: justify;
+	font-size: 1em;
+}
+.Content-About smol {
+	margin: 6px 0 6px 0;
+
+	font-family: 'Montserrat-Regular', sans-serif;
+	text-align: justify;
+	font-size: 1em;
+}
+.Content-About ul {
+	margin: 0;
+	padding: 0 0 0 2em;
+}
+.Content-About li {
+	font-family: 'Montserrat-Regular', sans-serif;
+	text-align: justify;
+}
+.Content-About a {
+	text-decoration: none;
+	color: rgb(234, 142, 0);
+}
+.Content-About a:hover {
+	padding-bottom: 2px;
+	border-bottom: 1px solid rgb(234, 142, 0);
+}
+
+.Separator {
+	margin: 25px 0 25px 0;
+
+	width: 100%;
+	border-style: none;
+    background-color: transparent;
+}
+
+.Content-General h1 {
+	font-family: 'Montserrat-Bold', sans-serif;
+	text-align: center;
+}
+.Content-General p {
+	margin: 6px 0 6px 0;
+
+	font-family: 'Montserrat-Regular', sans-serif;
+	text-indent: 2em;
+	text-align: justify;
+	font-size: 1em;
+}
+
+/* -- Управление галереей -- */
+.Gallery-Menu {
+	margin: 0 0 15px 0;
+	padding: 5px 30px;
+
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;	
+}
+
+.Gallery-Filter ul {
+	margin: 0;
+	padding: 3px 0 0 0
+}
+.Gallery-Filter li {	
+	display: inline-block;
+
+	list-style: none;
+	padding-right: 20px;
+}
+.Gallery-Filter a {
+	margin: 0;
+	padding: 2px 0;
+
+	text-decoration: none;
+
+	font-family: 'Montserrat-Regular', sans-serif;
+	font-size: 1.2rem;
+	color: rgb(19, 19, 19);
+}
+.Gallery-Filter a::after {
+	content: "";
+	display: block;
+	padding-bottom: 2px;
+	border-bottom: 2px solid rgb(234, 142, 0);
+	max-width: 100%;
+
+	transform-origin: 0 0;
+	transition: transform 0.35s; 
+	transform: scale(0, 1);
+}
+.Gallery-Filter a:hover::after {
+	transform: scale(1);
+}
+.Gallery-Filter .Active {
+	border-bottom: 2px solid rgb(234, 142, 0);
+}
+
+.Gallery-Sizing {
+	display: flex;
+}
+.Gallery-Sizing a {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+.Gallery-Sizing .Button {
+	margin: 3px;
+
+	width: 29px;
+	height: 29px;
+	border: 2px solid rgba(19, 19, 19, 0.6);
+	transition: all 0.2s;
+}
+.Gallery-Sizing .Button:hover {
+	border: 2px solid rgb(234, 142, 0);
+}
+.Gallery-Sizing .Active {
+	border: 2px solid rgb(19, 19, 19);
+}
+
+
+
+/* -- Отображение и анимация всплывающей фотографии -- */
+.mfp-counter, .mfp-title, .mfp-s-error {
+	font-family: 'Century-Gothic-Bold', serif;
+	color: rgb(255, 255, 255);
+}
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}

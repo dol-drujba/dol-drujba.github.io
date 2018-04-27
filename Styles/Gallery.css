@@ -1,0 +1,164 @@
+/* -- Общее -- */
+.Gallery {
+	margin: 0;
+	padding: 0;
+
+	clear: both;
+	width: 100%;
+}
+.Gallery .Item {
+	display: block;
+	position: relative;	
+
+	width: auto;
+}
+
+.Gallery .Image {
+	position: relative;	
+
+	width: 100%;
+	transition: opacity 0.2s ease;
+	z-index: 9;
+}
+.Gallery .Image a {
+	display: block;
+	position: relative;
+
+	width: 100%;
+	height: 100%;
+	background-color: rgb(19, 19, 19);
+	
+	z-index: 9;
+}
+.Gallery .Image img {
+	margin: 0 0 -2px 0;
+
+	max-width: 100%;
+	height: auto;
+}
+.Gallery .Description {
+	position: absolute;
+	
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	
+	pointer-events: none;
+	z-index: 10;
+}
+.Gallery .Description .Text {
+	display: inline-block;
+	position: absolute;
+
+	opacity: 0;
+	width: 100%;
+	bottom: 0;
+
+	color: rgb(247, 246, 245);
+	transition: all 0.2s ease;
+}
+
+.Gallery .Item:hover .Description .Text {
+	opacity: 1;
+}
+.Gallery .Description h3,
+.Gallery .Description p {
+	margin: 0;
+	padding: 0;
+	
+	transition: transform 0.35s;	
+}
+.Gallery .Item:hover .Description h3,
+.Gallery .Item:hover .Description p {
+	transform: translate3d(0, 0, 0);
+}
+.Gallery .Description h3 {
+	font-family: 'Century-Gothic-Bold', serif;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	letter-spacing: 0.05em;
+}
+.Gallery .Description .Text > p {
+	opacity: 0.8;
+
+	font-family: 'Century-Gothic-Regular', serif;
+	font-size: 1rem;	
+}
+
+/* -- Галерея: Каменная кладка -- */
+.Masonry.Gallery {
+	margin: 0;
+	width: 102.2%;
+}
+.Masonry .Item {
+	margin: 0 2% 2% 0;
+
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 31.3%;
+}
+
+.Masonry .Item.column-2 { width: 48%; }
+.Masonry .Item.column-3 { width: 31.3%; }
+.Masonry .Item.column-4 { width: 23%; }
+.Masonry .Item.column-5 { width: 18%; }
+.Masonry .Item.column-6 { width: 14.66%; }
+.Masonry .Item.column-7 { width: 12.28%; }
+.Masonry .Item.column-8 { width: 10.5%; }
+
+.Masonry .Item:hover .Image {
+	margin: 0;
+	opacity: 0.3;
+}
+.Masonry .Image {
+	text-align: center;
+}
+.Masonry .Description .Text {
+	padding: 1em;
+	bottom: 0;
+
+	font-size: .8em;
+	text-align: center;
+	color: .F7F6F5;
+}
+.Masonry .Item.column-5 .Description {
+	font-size: 0.85em;
+}
+.Masonry .Description h3 {
+	margin-bottom: 0.5em;
+	transform: translate3d(0, -20px, 0);	
+}
+.Masonry .Description p {
+	padding-bottom: 1em;
+	transform: translate3d(0, 20px, 0);	
+}
+
+.Gallery.no-margin {
+	margin-bottom: 0 !important;
+}
+
+/* -- Галерея: Горизонтальная -- */
+.Horizontal.Gallery { height: 200px; white-space: nowrap; overflow-x: auto; overflow-y: hidden; width: 100%; margin: 0 0 1.5em 0; }
+.Horizontal .Item { display: inline-block; vertical-align: top; height: 100%; width: auto; margin: 0 2% 0 0; }
+.Horizontal .Item:last-child { margin-right: 0; }
+.Horizontal .Image { display: block; width: 100%; height: 100%; } 
+.Horizontal .Image img { height: 100%; width: auto; max-width: 9999px; }
+.Horizontal .Description { white-space: normal;  font-size: .85em; padding: 2em; }
+.Horizontal .Description h3 { margin-bottom: 0.3em; transform: translate3d(-10px,0,0);  }
+.Horizontal .Description p { transform: translate3d(-5px,0,0); padding-bottom: 2em; }
+
+/* Адаптив */
+@media screen and (max-width: 980px) {
+	.Description .Text { opacity: 0 !important; }
+	.Description h3, .Description p { transform: none !important; }
+}
+@media screen and (max-width: 767px) {
+	.Gallery-Menu { display: none; }
+	.Masonry .Item { width: 47.5% !important; }
+}
+@media screen and (max-height: 480px) {
+	.Masonry .Item { width: 98% !important; }
+}
+@media screen and (max-width: 640px) and (orientation: portrait) {
+	.Masonry .Item { width: 98% !important; }
+}
