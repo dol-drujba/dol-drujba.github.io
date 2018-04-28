@@ -149,6 +149,7 @@
 
 /* Адаптив */
 @media screen and (max-width: 980px) {
+	.Description { opacity: 0 !important; }
 	.Description .Text { opacity: 0 !important; }
 	.Description h3, .Description p { transform: none !important; }
 }

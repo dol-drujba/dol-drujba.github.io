@@ -37,12 +37,14 @@
 .Content-About h1 {
 	font-family: 'Montserrat-Bold', sans-serif;
 	text-align: center;
+
+	font-size: 2.2rem;
 }
 .Content-About h2 {
 	margin: 6px 0 6px 0;
 	
 	font-family: 'Montserrat-Bold', sans-serif;
-	font-size: 1em;
+	font-size: 1.3em;
 }
 .Content-About p {
 	margin: 6px 0 6px 0;
@@ -50,14 +52,14 @@
 	font-family: 'Montserrat-Regular', sans-serif;
 	text-indent: 2em;
 	text-align: justify;
-	font-size: 1em;
+	font-size: 1.3em;
 }
 .Content-About smol {
 	margin: 6px 0 6px 0;
 
 	font-family: 'Montserrat-Regular', sans-serif;
 	text-align: justify;
-	font-size: 1em;
+	font-size: 1.3em;
 }
 .Content-About ul {
 	margin: 0;
@@ -66,6 +68,8 @@
 .Content-About li {
 	font-family: 'Montserrat-Regular', sans-serif;
 	text-align: justify;
+
+	font-size: 1.3em;
 }
 .Content-About a {
 	text-decoration: none;
@@ -85,8 +89,12 @@
 }
 
 .Content-General h1 {
+	margin: 0;
+	/*padding: 0;*/
 	font-family: 'Montserrat-Bold', sans-serif;
 	text-align: center;
+
+	font-size: 2.2rem;
 }
 .Content-General p {
 	margin: 6px 0 6px 0;
@@ -94,7 +102,7 @@
 	font-family: 'Montserrat-Regular', sans-serif;
 	text-indent: 2em;
 	text-align: justify;
-	font-size: 1em;
+	font-size: 1.3em;
 }
 
 /* -- Управление галереей -- */
