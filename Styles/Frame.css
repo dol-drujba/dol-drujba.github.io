@@ -47,6 +47,8 @@ body {
 	font-family: 'Montserrat-Regular', sans-serif;
 }
 
+
+
 /* -- HEADER -- */
 .Header {
 	margin-bottom: 15px;
@@ -296,6 +298,7 @@ body {
 
 /* -- FOOTER -- */
 .Footer {
+	/*flex: 0 0 auto;*/
 	margin-top: 15px;
 	padding: 50px 0px 50px 0px;
 
@@ -399,14 +402,23 @@ body {
 .Visible { display: block; }
 .Invisible { display: none; }
 
+.fff {
+	display: flex;
+	margin: 0;	
+	padding: 0;	
+
+	width: 102%;
+}
+
 /* Скрытое главное меню */
 .SideBar .Active {
-	background-color: rgba(255, 220, 96, 0.6);
+	background-color: rgb(255, 220, 96);
 }
 
 .SideBar .Button {
-	margin: 0 0 15px 0;
+	margin: 0 2% 15px 0;
 	padding: 1px 0 1px 0;
+	position: relative;
 
 	width: 100%;
 	background-color: rgb(255, 255, 255);
@@ -429,18 +441,18 @@ body {
 	text-decoration: none;
 	color: rgb(19, 19, 19);	
 }
-.SideBar .Button .Icon {
-	display: none;
+#Menu .Icon {
+	/*display: none;*/
 	margin: 0;
 	padding: 0;
 
 	position: absolute;
 	top: 12px;
-	right: 0;
+	right: -15px;
 
 	transform: translateX(-40px);
 }
-.SideBar .Button .Icon hr {
+#Menu .Icon hr {
 	display: block;
 	margin: 3px;
 	padding: 0;
@@ -449,6 +461,33 @@ body {
 	height: 2px;
 	border-style: none;
     background-color: rgb(0, 0, 0);
+}
+
+#Filter .Icon {
+	margin: 0;
+	padding: 0;
+
+	position: absolute;
+	top: 12px;
+	right: -13px;
+
+	transform: translateX(-40px);
+}
+#Filter .Icon hr {
+	display: inline-block;
+	margin: 3px 2px;
+	padding: 0;
+
+	width: 2px;
+	height: 14px;
+	border-style: none;
+    background-color: rgb(0, 0, 0);
+}
+#Filter .Icon hr:first-child {
+	height: 9px;
+}
+#Filter .Icon hr:last-child {
+	height: 6px;
 }
 
 .SideBar .Menu {
@@ -473,8 +512,38 @@ body {
 	padding: 7px 0;
 	display: block;
 
-	font-family: 'Montserrat-Bold', sans-serif;
-	font-size: 1.2rem;
+	font-family: 'Montserrat-Regular', sans-serif;
+	font-size: 1.25rem;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: rgb(19, 19, 19);	
+}
+
+.SideBar .Filter {
+	display: none;
+	margin: 0 2% 15px 0;
+	padding: 1px 0 1px 0;
+
+	width: 100%;
+	
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;
+}
+.SideBar .Filter ul {
+	list-style: none;
+	padding: 0;
+}
+.SideBar .Filter li:hover {
+	background-color: rgb(255, 220, 96);
+}
+.SideBar .Filter a {
+	margin: 0;
+	padding: 7px 0;
+	display: block;
+
+	font-family: 'Montserrat-Regular', sans-serif;
+	font-size: 1.25rem;
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
