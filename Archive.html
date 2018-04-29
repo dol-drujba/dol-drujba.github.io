@@ -62,11 +62,12 @@
 
 					<!-- SIDEBAR -->
 					<div class="SideBar">
-						<div class="Button Invisible">
+
+						<div id="Menu" class="Button Invisible">
 							<ul><li><a href="#">Меню</a></li></ul>
 							<div class="Icon"><hr><hr><hr></div>
 						</div>
-
+												
 						<div class="Menu Invisible">
 							<ul>
 								<li><a href="index.html">Главная</a></li>
@@ -77,10 +78,32 @@
 							</ul>
 						</div>
 
+						<div id="Filter" class="Button Invisible">
+							<ul><li><a href="#">Фильтр</a></li></ul>
+							<div class="Icon"><hr><hr><hr></div>
+						</div>
+
+						<div class="fff">
+							<div id="Year" class="Filter Invisible">
+								<ul>
+									<li><a href="#Year-2017" class="Smooth-Move">2017</a></li>
+									<li><a href="#Year-2016" class="Smooth-Move">2016</a></li>
+								</ul>
+							</div>
+							<div id="Period" class="Filter Invisible">
+								<ul>
+									<li><a href='javascript:void(0)' data-filter='*' class="Active">Все</a></li>
+									<li><a href='javascript:void(0)' data-filter='.One'>Смена №1</a></li>
+									<li><a href='javascript:void(0)' data-filter='.Two'>Смена №2</a></li>
+									<li><a href='javascript:void(0)' data-filter='.Three'>Смена №3</a></li>
+								</ul>
+							</div>
+						</div>
+
 						<div class="SideBar-Menu Visible">
 							<ul>
-								<li><a href="#">2016 год</a></li>
-								<li><a href="#">2017 год</a></li>
+								<li><a href="#Year-2017" class="Smooth-Move">2017</a></li>
+								<li><a href="#Year-2016" class="Smooth-Move">2016</a></li>				
 							</ul>
 						</div>
 						
@@ -139,6 +162,8 @@
 							</div>
 
 							<!-- Gallery -->
+							<h1 id="Year-2017" style="text-align: right;">2017</h1>
+
 							<div class="Gallery Masonry">								
 								<figure class="Item One">
 									<div class="Image">
@@ -210,10 +235,87 @@
 												<p>Описание</p>
 											</div>
 									</figcaption>
-								</figure>							
+								</figure>
 							</div>
 
-							<hr class="Separator">
+							<hr id="Year-2016" class="Separator">
+							<h1 style="text-align: right;">2016</h1>
+
+							<div class="Gallery Masonry">
+								<figure class="Item One">
+									<div class="Image">
+										<a href="Multimedia/Slider/FzVlu2bG6_w.jpg" class="popup"><img src="Multimedia/Slider/FzVlu2bG6_w.jpg" alt=""></a>
+									</div>
+									<figcaption class="Description">
+											<div class="Text">
+												<h3>Название</h3>
+												<p>Описание</p>
+											</div>
+									</figcaption>
+								</figure>
+					
+								<figure class="Item One">
+									<div class="Image">
+										<a href="Multimedia/Slider/FzVlu2bG6_w.jpg" class="popup"><img src="Multimedia/Slider/FzVlu2bG6_w.jpg" alt=""></a>
+									</div>
+									<figcaption class="Description">
+											<div class="Text">
+												<h3>Название</h3>
+												<p>Описание</p>
+											</div>
+									</figcaption>
+								</figure>
+
+								<figure class="Item Two">
+									<div class="Image">
+										<a href="Multimedia/Slider/FzVlu2bG6_w.jpg" class="popup"><img src="Multimedia/Slider/FzVlu2bG6_w.jpg" alt=""></a>
+									</div>
+									<figcaption class="Description">
+											<div class="Text">
+												<h3>Название</h3>
+												<p>Описание</p>
+											</div>
+									</figcaption>
+								</figure>
+
+								<figure class="Item Two">
+									<div class="Image">
+										<a href="Multimedia/Slider/FzVlu2bG6_w.jpg" class="popup"><img src="Multimedia/Slider/FzVlu2bG6_w.jpg" alt=""></a>
+									</div>
+									<figcaption class="Description">
+											<div class="Text">
+												<h3>Название</h3>
+												<p>Описание</p>
+											</div>
+									</figcaption>
+								</figure>
+
+								<figure class="Item Three">
+									<div class="Image">
+										<a href="Multimedia/Slider/FzVlu2bG6_w.jpg" class="popup"><img src="Multimedia/Slider/FzVlu2bG6_w.jpg" alt=""></a>
+									</div>
+									<figcaption class="Description">
+											<div class="Text">
+												<h3>Название</h3>
+												<p>Описание</p>
+											</div>
+									</figcaption>
+								</figure>
+
+								<figure class="Item Three">
+									<div class="Image">
+										<a href="Multimedia/Slider/FzVlu2bG6_w.jpg" class="popup"><img src="Multimedia/Slider/FzVlu2bG6_w.jpg" alt=""></a>
+									</div>
+									<figcaption class="Description">
+											<div class="Text">
+												<h3>Название</h3>
+												<p>Описание</p>
+											</div>
+									</figcaption>
+								</figure>
+							</div>
+
+
 						</div>
 					</div>
 				</div>
@@ -275,83 +377,5 @@
 
 		<script src="Scripts/isotope.pkgd.min.js"></script>
 		<script src="Plugins/Magnific Popup/jquery.magnific-popup.min.js"></script>
-
-		<script>
-			// masonry gallery
-		var $Gallery = jQuery('.Gallery');
-		if ( $Gallery.length > 0 ) {
-
-			$Gallery.each( function(index, element) {
-				var $Items = $(element).find('.Item');
-			
-				// set masonry layout
-				$(element).isotope({
-					masonry: { columnWidth: $(element).find('.Item')[0] },
-					itemSelector: '.Item'
-				});
-				$(element).isotope('layout');
-					
-				// Фильтрация (Photo / Video)
-				jQuery('.Gallery-Filter li a').on('click', function(){
-					jQuery('.Gallery-Filter li a').removeClass('Active');
-					jQuery(this).addClass('Active');
-					var selector = jQuery(this).attr('data-filter');
-					$Gallery.isotope({ filter: selector });
-					return false;
-				});
-
-				// Изменение количества столбцов
-				jQuery('.Gallery-Sizing .Button').on('click', function(){
-					jQuery('.Gallery-Sizing .Button').removeClass('Active');
-					jQuery(this).toggleClass('Active');
-
-					$Items.removeClass('column-3');
-					$Items.removeClass('column-4');
-					$Items.removeClass('column-5');
-					$Items.toggleClass(jQuery(this).closest('a').attr('class'));
-					$Gallery.isotope('layout');
-				});
-			
-			});
-		}
-		</script>
-		<script>
-			// init Magnific popup
-			jQuery('.Gallery').magnificPopup({
-				delegate: 'a.popup',
-			  type: 'image',
-			  tLoading: 'Загрузка изображения #%curr% ...',
-			  gallery: {
-			  	enabled: true,
-			  	tPrev: 'Назад',
-			  	tNext: 'Вперёд',
-			  	tCounter: 'Изображение %curr% из %total%'
-			  },
-			  image: {
-			  	cursor: 'mfp-zoom-out-cur',
-			  	tError: 'Не удалось загрузить изображение!',
-			  	titleSrc: 'alt'
-
-			  	/*markup: '<div class="mfp-figure">' +
-            				'<div class="mfp-close"></div>' +
-            				'<div class="mfp-img"></div>' +
-            				'<div class="mfp-bottom-bar">' +
-              				'<div class="mfp-title"></div>' +
-              				'<div class="mfp-counter"></div>' +
-            				'</div>' +
-          				'</div>'*/
-          				
-			  },
-			  mainClass: 'mfp-with-zoom',
-			  zoom: {
-			    enabled: true,
-			    duration: 300,
-			    easing: 'ease-in-out',
-			    opener: function(openerElement) {
-			      return openerElement.is('img') ? openerElement : openerElement.find('img');
-			    }
-			  }
-			});
-		</script>
 	</body>
 </html>
